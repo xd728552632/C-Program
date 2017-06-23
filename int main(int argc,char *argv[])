@@ -1,0 +1,26 @@
+这是一个C语言程序，存在于指针的一节，名字是--带参数的main函数
+
+程序代码如下
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc,char *argv[]) {           //主函数中argc代表你输入的词有多少,*argv[]其实是个二级指针,但必须是二级指针
+    int i;
+    for(i = 0;i < argc;i++){
+        printf("%s ",argv[i]);               //利用主函数中输入的不同组的函数(用空格来隔开的组),用循环输出
+    }
+    printf("%d",argc);
+    return 0;
+}
+
+
+倘若这个程序在D盘根目录，命名为test.exe(用codebocks   debug后会生成一个*.exe的可执行文件) 
+
+那么你就进入命令行输入
+
+D:\>test hello world
+
+命令行会输出test hello world 3    
+
+倘若你将test换成test.exe也是可以的，但是你不可以换成其他的东西，否则不会被识别
